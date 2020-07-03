@@ -1,0 +1,15 @@
+::ng-deep{
+.gridline-path {
+    stroke: #ececec;
+    stroke-width: 1;
+    fill: none;
+  }
+}
+  
+  canvas,
+  .brush-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  

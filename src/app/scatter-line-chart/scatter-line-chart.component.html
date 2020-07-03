@@ -1,0 +1,8 @@
+<canvas [style.left.px]="dims.xOffset" [style.top.px]="margin[0]" #canvas [attr.width]="dims.width"
+        [attr.height]="dims.height"></canvas>
+<ngx-charts-chart [view]="[width, height]" [showLegend]="false">
+  <svg:g [attr.transform]="transform" class="bubble-chart chart">
+    <svg:g ngx-charts-x-axis [showGridLines]="true" [dims]="dims" [xScale]="xScale" />
+    <svg:g ngx-charts-y-axis [showGridLines]="true" [dims]="dims" [yScale]="yScale" />
+  </svg:g>
+</ngx-charts-chart>

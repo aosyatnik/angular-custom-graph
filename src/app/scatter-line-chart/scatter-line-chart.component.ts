@@ -4,6 +4,9 @@ import { Component,
          NgZone,
          ChangeDetectorRef,
          Input,
+	 Inject,
+	 PLATFORM_ID,
+
          ViewChild,
          SimpleChanges } from '@angular/core';
 
@@ -50,9 +53,13 @@ export class ScatterLineChartComponent<T> extends BaseChartComponent implements 
 
   @Input() config: ChartConfig<T>;
 
-  constructor(elementRef: ElementRef, zone: NgZone, cdr: ChangeDetectorRef) {
-    super(elementRef, zone, cdr);
-   }
+    constructor(elementRef: ElementRef, zone: NgZone, cdr: ChangeDetectorRef,
+        @Inject(PLATFORM_ID) platformId: Object) {
+      super(elementRef, zone, cdr, platformId);
+    }
+     // constructor(elementRef: ElementRef, zone: NgZone, cdr: ChangeDetectorRef) {
+     // super(elementRef, zone, cdr);
+     // }
 
    ngOnChanges(changes: SimpleChanges): void {
     this.update();

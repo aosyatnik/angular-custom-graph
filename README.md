@@ -1,6 +1,8 @@
 # AngularCustomGraph
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+
+In this modification I made few changes to work with Angular version 11.0.5
 
 ## Development server
 
